@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GT7 Online Info: Extended Collector Level Calculator</title>
+  <meta property="og:title" content="GT7 Online Info: Extended Collector Level Calculator">
+  <meta property="og:locale" content="en_GB">
+  <link rel="canonical" href="https://ddm999.github.io/gt7info/extended-level-calculator">
+  <meta property="og:url" content="https://ddm999.github.io/gt7info/extended-level-calculator">
+  <meta property="og:site_name" content="ddm999.github.io/gt7info">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="GT7 Online Info: Extended Collector Level Calculator">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","headline":"GT7 Online Info: Extended Collector Level Calculator","name":"ddm999.github.io/gt7info","url":"https://ddm999.github.io/gt7info/extended-level-calculator"}
+  </script>
+  <link rel="stylesheet" href="style-simple.css?nocache=%BUILD_TIMESTAMP">
+  <script src="extended-level-calculator.js"></script>
+</head>
+<body>
+<header>
+<img src="img/gt7info-logo.svg" width="400"/><br>
+<h2 id="extended-level-calculator">Extended Collector Level Calculator</h2>
+</header>
+<div class="gt7-profile">
+<div id="description">
+Enter either your total XP (as displayed in-game when receiving XP)<br>
+or your Level 50 XP (as displayed on your profile after reaching level 50)<br>
+to calculate your Extended Collector Level.<br>
+<br>
+This is calculated in the same way levels 18-50 are calculated in-game,<br>
+and is just for fun to see how high your level <i>would</i> be if it continued infinitely.<br>
+<br>
+<b>Note:</b> the page may freeze or hang if you put ridiculously large values in (9+ digit values). So maybe don't do that. 😛<br>
+<br>
+</div>
+Total XP: <input id="total-xp" type="number" id="xp" min="0" max="9999999999"/> <span style="font-size:13px">pts</span>
+/ Level 50 XP: <input id="lv50-xp" type="number" id="xp" min="0" max="9999999999"/> <span style="font-size:13px">pts</span><br>
+<br>
+<svg width="50" height="50">
+  <circle stroke="#b5b5b5" fill="transparent" stroke-width="2" r="23" cx="25" cy="25"></circle>
+  <circle id="next-level-circle" stroke="#f1346d" fill="transparent" stroke-width="2" stroke-dasharray="0 144.5" r="23" cx="25" cy="25" style="stroke-dashoffset: 0;"></circle>
+</svg>
+<span id="collector-level">Collector Level</span>
+<span id="current-level">1</span>
+<span id="next-level-section"><span id="current-level-xp">0</span> /<span id="next-level-xp">0</span> pts</span>
+</div>
+<br>
+<header>
+<a href="https://ddm999.github.io/gt7info/">Return to home</a><br>
+</header>
+<br><br>
+<footer>
+  This page is not affiliated with Polyphony Digital or Sony Interactive Entertainment.<br>
+  It is provided by fans of the Gran Turismo series.<br>
+  <br>
+  You may have issues if you browse with Internet Explorer, or any other outdated browser.<br>
+  <br>
+  Hosted on GitHub Pages - Source is available at <a href="https://github.com/ddm999/gt7info">github.com/ddm999/gt7info</a><br>
+  Styling adapted from <a href="https://github.com/orderedlist/minimal">github.com/orderedlist/minimal</a><br><br>
+  If you're interested in delving deeper into Gran Turismo / have an interest in GT5 and GT6 modding (which improves all the time!)<br>
+  you can hang out on the <a href="https://discord.gg/YbJjbYEKzB">GT Modding Community Discord</a>.<br>
+</footer>
+</div>
+</body>
+</html>
