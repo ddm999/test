@@ -1,4 +1,4 @@
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timezone, timedelta
 from matplotlib import dates, pyplot
 from db import *
 import numpy as np
@@ -19,8 +19,8 @@ def cardata_exists(carid):
 
 def cardata_plot(carid):
     now = datetime.now(timezone.utc).date()
-    #mindate = now
-    mindate = date.fromisoformat("2022-03-03")
+    mindate = now - timedelta(weeks=53)
+    #mindate = date.fromisoformat("2022-03-03")
     daycredits = {}
     for values in cardata[carid]:
         type, datestr, credits = values.split(',')
