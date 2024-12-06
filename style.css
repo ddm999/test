@@ -356,6 +356,21 @@ footer {
     left: 98px;
     text-align: center;
 }
+.car #transfer-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 130px;
+}
+.car #transfer-text {
+    font-family: 'Roboto';
+    font-size: 8px;
+    color: rgb(188, 28, 0);
+
+    position: absolute;
+    bottom: 35px;
+    left: 128px;
+    text-align: center;
+}
 
 #legend-section {
     background-color: #28282b;
@@ -560,6 +575,21 @@ footer {
     position: absolute;
     bottom: 50px;
     left: 78px;
+    text-align: center;
+}
+.lcar #transfer-icon {
+    position: absolute;
+    bottom: 25px;
+    left: 110px;
+}
+.lcar #transfer-text {
+    font-family: 'Roboto';
+    font-size: 8px;
+    color: rgb(188, 28, 0);
+
+    position: absolute;
+    bottom: 50px;
+    left: 108px;
     text-align: center;
 }
 

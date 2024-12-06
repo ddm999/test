@@ -60,9 +60,13 @@ with open(f"_data/rewards/{os.listdir('_data/rewards')[-1]}") as f:
 lines = lines[1:] # remove headers
 
 rewards = {}
+transfer = {}
 for reward in lines:
     rewardsplit = reward.strip().split(",")
-    rewards[rewardsplit[0]] = rewardsplit[1:]
+    if rewardsplit[1] == "transfer":
+        transfer[rewardsplit[0]] = rewardsplit[2:]
+    else:
+        rewards[rewardsplit[0]] = rewardsplit[1:]
 
 lines = []
 with open(f"_data/db/engineswaps.csv") as f:
@@ -215,6 +219,11 @@ for line in lines:
         car +=  '\n        <span id="trophy-text">TROPHY<br>REQ.</span>'+\
                f'\n        <img id="trophy-icon" src="img/trophy.svg" width="24" title="Must be owned to earn the {trophyname} trophy."/>'
 
+    if carid in transfer.keys():
+        game, action = transfer[carid]
+        car +=  '\n        <span id="transfer-text">TRANS.</span>'+\
+               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be earned from {game} {action}."/>'
+
     usedcars_section += f'{car}\n      </p>'
     jsondata["used"]["cars"].append({
         "carid": carid, "manufacturer": manufacturer, "region": region, "name": name, "credits": int(cr),
@@ -343,6 +352,11 @@ for line in lines:
         trophyname = trophycars[carid]
         car +=  '\n        <span id="trophy-text">TROPHY<br>REQ.</span>'+\
                f'\n        <img id="trophy-icon" src="img/trophy.svg" width="24" title="Must be owned to earn the {trophyname} trophy."/>'
+
+    if carid in transfer.keys():
+        game, action = transfer[carid]
+        car +=  '\n        <span id="transfer-text">TRANS.</span>'+\
+               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be earned from {game} {action}."/>'
 
     legendcars_section += car + '\n      </p>'
     jsondata["legend"]["cars"].append({
