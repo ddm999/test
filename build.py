@@ -222,7 +222,7 @@ for line in lines:
     if carid in transfer.keys():
         game, action = transfer[carid]
         car +=  '\n        <span id="transfer-text">TRANS.</span>'+\
-               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be earned from {game} {action}."/>'
+               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be transferred from {game} after {action}."/>'
 
     usedcars_section += f'{car}\n      </p>'
     jsondata["used"]["cars"].append({
@@ -356,7 +356,7 @@ for line in lines:
     if carid in transfer.keys():
         game, action = transfer[carid]
         car +=  '\n        <span id="transfer-text">TRANS.</span>'+\
-               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be earned from {game} {action}."/>'
+               f'\n        <img id="transfer-icon" src="img/mfgt.svg" width="24" title="Can be transferred from {game} after {action}."/>'
 
     legendcars_section += car + '\n      </p>'
     jsondata["legend"]["cars"].append({
