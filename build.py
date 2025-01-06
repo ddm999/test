@@ -4,7 +4,7 @@ from cardata import *
 from db import *
 from math import floor
 
-DATA_VERSION = 152
+DATA_VERSION = 154
 BUILD_TIMESTAMP = datetime.now().strftime("%Y%m%d%H%M%S")
 
 jsondata = {
